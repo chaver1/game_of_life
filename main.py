@@ -51,4 +51,3 @@ if __name__ == "__main__":
     pass
 
 #TEMP-TEST-CODE
-print(dead_state(5,4))

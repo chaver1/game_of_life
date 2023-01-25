@@ -1,0 +1,3 @@
+1. Establish board
+2. Establish Dead_State Board
+3. Establish Random_State Board
