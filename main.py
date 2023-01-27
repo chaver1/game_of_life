@@ -1,24 +1,18 @@
 #import_statements
 from random import random
 
-board = [[1, 1, 1, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1, 1, 1], 
-        [1, 1, 1, 1, 1, 1, 1], 
-        [1, 1, 1, 1, 1, 1, 1], 
-        [1, 0, 1, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1, 1, 1],] #7x7 Board 
-
-#SET-UP METHODS
+#SET-UP Subroutines
 def dead_state(width, height):
-    dead_array = [0] * height
+    state = [0] * height
 
-    for i in range(len(dead_array)):
-        dead_array[i] = [0] * width
+    for i in range(len(state)):
+        state[i] = [0] * width
 
-    return dead_array 
+    return state
 
 def random_state(width, height, probability_param=0.5):
     state = dead_state(width, height)
+
     for i in range(len(state)):
         random_num = random(0, 1)
         if random_num >= probability_param:
@@ -31,13 +25,13 @@ def print_state(board, width=0, height=0):
     if width > 0 and height > 0:
         print("This is a board of width and height")
         print(board)
+        
     else: 
         ValueError("""This Board does not have a width and height greater
         than zero making it unprintable""")
-
     
-def pretty_print_state():
-    pass
+def render(board_state):
+    
 
 #GAME-METHODS
 def next_board_state(initial_state: int): #stablish rules
