@@ -1,13 +1,12 @@
 #import_statements
-from random import Random
+from random import random
 
 board = [[1, 1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1, 1], 
         [1, 1, 1, 1, 1, 1, 1], 
         [1, 1, 1, 1, 1, 1, 1], 
         [1, 0, 1, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1, 1, 1],] #7x7 Board
-
+        [1, 1, 1, 1, 1, 1, 1],] #7x7 Board 
 
 #SET-UP METHODS
 def dead_state(width, height):
@@ -18,17 +17,16 @@ def dead_state(width, height):
 
     return dead_array 
 
-
 def random_state(width, height, probability_param=0.5):
     state = dead_state(width, height)
     for i in range(len(state)):
-        random_num = Random(0, 1)
+        random_num = random(0, 1)
         if random_num >= probability_param:
             state[i][i] = 0
-        else: 
+        else:
             state[i][i] = 1
     return state
-    
+
 def print_state(board, width=0, height=0):
     if width > 0 and height > 0:
         print("This is a board of width and height")
@@ -43,11 +41,11 @@ def pretty_print_state():
 
 #GAME-METHODS
 def next_board_state(initial_state: int): #stablish rules
-    for i in range(len(initial_state)):
-        pass
+    pass
 
 #DRIVER CODE
 if __name__ == "__main__":
     pass
 
 #TEMP-TEST-CODE
+print(random_state(5,4))
