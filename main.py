@@ -34,15 +34,28 @@ def render(board_state):
         print("|") 
         for j in range(len(board_state)):
             if j == 1: 
-                print("@")
-            else:
                 print("#")
+            else:
+                print("_")
         print("|")
     print("-" * len(board_state))
 
-#GAME-METHODS
-def next_board_state(initial_state: int):
-    pass
+#GAME-FUNCTIONS
+
+def board_state_transform(prev_state):
+    for i in range(len(prev_state)):
+        for j in range(len(prev_state)):
+            pass
+    """#*THINKING ON THIS FXN THUS FAR
+    Basic logic here should be around evaluating the alive/dead status
+    of cells j-1 and j+1 for a given cell j. Since the width of each line
+    is identical, we know that a given [j] within a given row[i] have the
+    same positioning. In other words we are also concerned with the alive/dead
+    status of cell j both in row i-1 and row i+1. So in total. we are concerned
+    relative to a cell [i][j], of [i][j-1], [i][j+1], [i-1][j], [i+1][j]. Though
+    this will only hold true for internal cells where all of the above positions
+    exist. If they don't exist, then more granular control will be necessary
+    """
 
 #DRIVER CODE
 if __name__ == "__main__":
