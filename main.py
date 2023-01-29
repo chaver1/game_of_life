@@ -1,4 +1,3 @@
-#import_statements
 from random import random
 
 #SET-UP Subroutines
@@ -12,7 +11,6 @@ def dead_state(width, height):
 
 def random_state(width, height, probability_param=0.5):
     state = dead_state(width, height)
-
     for i in range(len(state)):
         random_num = random(0, 1)
         if random_num >= probability_param:
@@ -31,10 +29,19 @@ def print_state(board, width=0, height=0):
         than zero making it unprintable""")
     
 def render(board_state):
-    
+    print("-" * len(board_state))
+    for i in range(len(board_state)):
+        print("|") 
+        for j in range(len(board_state)):
+            if j == 1: 
+                print("@")
+            else:
+                print("#")
+        print("|")
+    print("-" * len(board_state))
 
 #GAME-METHODS
-def next_board_state(initial_state: int): #stablish rules
+def next_board_state(initial_state: int):
     pass
 
 #DRIVER CODE

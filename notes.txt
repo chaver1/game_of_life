@@ -1,8 +1,0 @@
-Render Function Task-Break Up: 
--vertical borders generated with |, horizontal borders generated with ----
--0s correlate to @, 1s correlate to #
-
-Render Function Potential Iterations: 
--Color-Choice; ability to input color choice as optional param from default
--Character-Choice; ability to input choice of characters to represent 0s and 1s
- 
